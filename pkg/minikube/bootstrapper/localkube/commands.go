@@ -46,6 +46,7 @@ Type=notify
 Restart=always
 RestartSec=3
 
+Environment='GODEBUG=netdns=go'
 ExecStart={{.LocalkubeStartCmd}}
 
 ExecReload=/bin/kill -s HUP $MAINPID
